@@ -11,9 +11,10 @@
     }
     #menubar ul{
       margin :0;  /*여백 패딩 0*/
+      margin-top: 20px;
       padding:0;
       text-align: center;
-      width: 950px;
+      width: 960px;      
     }
     #menubar li{
       display: inline-block; /*가로로 일직선*/
@@ -27,19 +28,88 @@
       color : white;
     }
     #menubar ul li a:hover{
-      color:blueviolet
+      color:blueviolet;
     }
+    body{
+      margin: 0 auto;
+      width: 960px;
+      background-color: beige;
+    }
+    h3{
+      color: brown;
+      font-style:italic
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;  
+      border-spacing: 0;
+      padding: 0px;
+    }
+    th{
+      width:25%;
+      height:30px;
+      border: 1px solid purple;
+    }
+    body tbody tr{
+      margin: 0,0,0,0;
+    }
+    #mv{
+      height:150px;
+    }
+    #img{
+      height:150px;
+
+    }
+    img{
+      padding-top: 0px;
+      padding-bottom: 0px;
+      height:150px;
+      object-fit : cover;
+    }
+    iframe{
+      padding-top: 0px;
+      padding-bottom: 0px;
+      height:150px;
+      width:238px;
+      object-fit : cover;
+    }
+    
+    
+    
   </style>
 </head>
 <body>
   <nav id="menubar">
     <ul>
-      <li><a href="1.html"> Home</a></li>
+      <li><a href="index.html"> Home</a></li>
       <li><a href="kpop.html"> K-pop</a></li>
       <li><a href="drama.html"> Drama</a></li>
       <li><a href="koreanfood.html"> Korean food</a></li>
-      <li><a href="bug.html"> Bug report</a></li>
+      <li><a href="bug.html"> F & Q</a></li>
     </ul>
   </nav>
+  <br>
+  <hr>
+  <h3>보이그룹</h3>
+  <table>
+    <thead>
+      <tr><th>방탄소년단</th> <th>세븐틴</th><th>NCT</th><th>투마로우바이투게더(TXT)</th></tr>
+    </thead>
+    <tbody>
+      <tr id="img"><th><img src="media/bts.PNG"></th> 
+        <th><img src="media/seventeen.PNG"> </th>
+        <th><img src="media/nct.PNG"></th>
+        <th> <img src="media/txt.PNG"></th></tr>
+      <tr id="mv">
+        <th> <iframe src="https://www.youtube.com/embed/XsX3ATc3FbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></th> 
+        <th> <iframe src="https://www.youtube.com/embed/zEkg4GBQumc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </th>
+        <th> <iframe src="https://www.youtube.com/embed/2OvyA2__Eas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></th>
+        <th> <iframe src="https://www.youtube.com/embed/Vd9QkWsd5p4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></th></tr>
+    </tbody>
+    <tfoot>
+      <tr><th>a</th> <th>b </th><th> c</th><th> c</th></tr>
+      <tr><th>a</th> <th>b </th><th> c</th><th> c</th></tr>
+    </tfoot>
+  </table>
 </body>
 </html>

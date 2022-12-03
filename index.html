@@ -14,7 +14,7 @@
       margin-top: 20px;
       padding:0;
       text-align: center;
-      width: 950px;      
+      width: 960px;      
     }
     #menubar li{
       display: inline-block; /*가로로 일직선*/
@@ -32,7 +32,8 @@
     }
     body{
       margin: 0 auto;
-      width: 950px;
+      width: 960px;
+      background-color: beige;
     }
     
     #taegeoukgi{
@@ -40,22 +41,25 @@
       height: 180px;
       float: right;
     }
-    #list{
+    #list li a{
       text-decoration: none;
-      list-style-type: none;
     }
     #list li:hover{
-      color:red
+      color:red;
+    }
+    #list li a:visited{
+      color: black;
     }
     #listnav{
-      width:18%;
+      width:165px;
       float:left;
       background-color: rgb(213, 247, 247);
       border: 1px solid black;
       border-radius: 20px;
+      position: fixed;
      }
     section{
-      width:81.5%;
+      width:82%;
       float:right;
       border-left: 1px;
       border-left-color: black;
@@ -72,7 +76,7 @@
 <body>
   <nav id="menubar">
     <ul>
-      <li><a href="1.html"> Home</a></li>
+      <li><a href="index.html"> Home</a></li>
       <li><a href="kpop.html"> K-pop</a></li>
       <li><a href="drama.html"> Drama</a></li>
       <li><a href="koreanfood.html"> Korean food</a></li>
@@ -86,19 +90,19 @@
        넓게는 패션, 화장품, 음식, 관광,무술, 산업 등 대한민국의
         문화가 세계에 알려지는 현상을 뜻한다.</h4>
         
-    <img id="taegeoukgi" src="./taegeukgi.png">
+    <img id="taegeoukgi" src="media/taegeukgi.PNG">
     
   </header>
   <br><br><br><br><br><br><br><br><br><br>
   <hr>
   <nav id="listnav">
-    <h6>클릭하면 해당자료로 이동합니다.</h6>
+    <h6>클릭하면 해당 위치로 이동합니다.</h6>
     <ul id="list">
-      <li><a href="#introduce">한국에 대하여</a></li>
-      <li><a href="#origin">어원</a></li>
-      <li>K-pop</li>
-      <li>드라마</li>
-      <li>한식</li>
+      <li><a href="#indroduce" title="'한국에 대하여'로 이동">한국에 대하여</a></li>
+      <li><a href="#origin" title="'한류의 어원'으로 이동">어원</a></li>
+      <li><a href="#kpop" title="'k-pop'으로 이동">K-pop</a></li>
+      <li><a href="#drama" title="'drama'로 이동">드라마</a></li>
+      <li><a href="#koreanfood" title="'한식'으로 이동">한식</a></li>
     </ul>
   </nav>
   <section>
@@ -112,15 +116,13 @@
         국가:애국가  /*버튼넣기*/
       </h5>
       <h5>
-        <audio src="aegukga.mp3" controls >
+        <audio src="media/aegukga.mp3" controls >
           브라우저가 audio 재생을 지원하지 않습니다.
         </audio>
       </h5>
       <h5>국화:무궁화</h5>
 
-        
-        
-      
+       
     </article>
     <article id="origin">
       <h3>● 한류의 어원</h3>
@@ -140,6 +142,41 @@
         아이돌 음악, 발라드 음악, OST 등을 일컫는 의미로 
         통용되고 있다.</h5>
     </article>
+  
+    <article id="drama">
+      <h3>● 드라마</h3>
+      <h5>K-웹툰과 웹소설을 각색한 드라마들이 해외에서 많은 인기를
+        얻고 있다. 외국인들이 한국 드라마에 열광하는 이유는 "영상으로
+         스토리를 잘 담아냈다. CG등의 비주얼 효과가 좋았다", "한국 
+        드라마는 스케일이ㅣ 큰 경우가 많다. 영화처럼 느껴지는 영상도 
+         마음에 들었다", "등장인물의 배경이나 상황이 자세히 묘사돼 있어
+          한 사람 한 사람의 활약이 마음에 와닿았다" 등등 많은 외국인들의 
+          의견이 있다.
+      </h5>
+   </article>
+
+   <article id="koreanfood">
+    <h3>● 한식</h3>
+    <h5>한국식 요리의 총칭. 한식(韓食)이라고 부르기도 한다. 주로 한국의 전통식 요리를 
+      뜻하며, 현대적으로 재창조된 한식은 '퓨전 한식' 등으로도 불린다.</h5>
+    <h4 style="color: blue;">평가</h4>
+      <h5>긍정적인 부분
+      <ol>
+        <li>다양한 채소/임산물/해조류의 활용</li>
+        <li>동물성 식재료의 깊이있는 활용</li>
+        <li>슬로푸드에 부합하는 발효식품 문화</li>
+        <li>다양한 조리법의 발달</li>
+      </ol>
+      부정적인 부분
+      <ol>
+        <li>발효식품에서 생기는 강한 향</li>
+        <li>과도한 향신료(특히 고추+마늘)와 양념의 사용</li>
+        <li>높은 탄수화물 비중과 대조적인 부족한 단백질</li>
+      </ol>
+    </h5>
+  </article>
+
+
   </section>
 
   <nav>
