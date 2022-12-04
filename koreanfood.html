@@ -37,18 +37,17 @@
     img{
       width: 400px;
       height:300px;
+      float: left;
     }
-    div{
-      display:inline-block;
+    
+    
+    #explain{
+      float:right;
+      width: 540px;
     }
+    
   </style>
-  <script>
-    function changeimage(){
-      let sel=document.getElementById("kofood");
-      let img=document.getElementByID("foodimg");
-      img.src = sel.options[sel.selectedIndex].value();
-    }
-  </script>
+  
 </head>
 <body onload="changeimage()">
   <script>
@@ -69,14 +68,89 @@
   </nav>
   <br>
   <hr>  
+  <script>
+    function changeimage(){
+      let sel=document.getElementById("kofood");
+      let img=document.getElementById("foodimg");
+      img.src = sel.options[sel.selectedIndex].value;
+    }
+    function print3food(){
+      let str="";
+      let output=document.getElementById("explain");
+      let sel=document.getElementById("kofood");
+      if (sel.selectedIndex==0){
+        output.innerHTML="";
+        str+="<p><h3>비빔밥</h3></p><h5>비빔밥은 밥에 각종 나물을 넣고, 장을 넣어서 비벼 먹는 전통 한국 요리로, 오늘날에는 육류를 같이 넣는 것이 선호되기도 한다<p>조리법:<ol><li>냉장고를 열어 나물류를 비롯한 있는 반찬을 꺼낸다.</li><li>밥을 퍼서 큰 그릇에 담는다.</li><li>꺼낸 반찬을 모두 밥 퍼놓은 그릇 위에 얹는다.</li><li>고추장(간장이나 된장이나 쌈장도 좋다)과 참기름을 한 큰술씩 넣는다.<br>소고기를 볶다가 고추장을 넣은 볶은 고추장은 비빔밤의 맛을 한층 업그레이드해주니 참고.</li><li>취향에 따라 계란 프라이도 하나 넣는다.</li></ol></p></h5>"
+        output.innerHTML=str;
+      }
+      else if (sel.selectedIndex==1){
+        output.innerHTML="";
+        str+="<p><h3>김치</h3></p><h5><p>김치는 한국의 전통 발효식품이자 일종의 조리 양식이다.<p> 소금물에 절이고 발효시켜 보관성을 높인 채소를 갖은 양념으로 맛을 내어 먹는 음식. 다른 수식어 없이 '김치'라고만 말하면 김장배추를 고추가루로 빨갛게 만든 남부지방식 배추김치를 주로 말하는 것이고 이것이 세계적으로 가장 유명하다. 이런 맵고 짠 김치 외에도 다양한 종류의 김치가 존재하는데, 무를 절여서 만든 총각김치나 깍두기, 오이로 만든 오이소박이, 과거의 서울이나 현 북부지방에서 김치 하면 주로 떠올렸던 백김치 등의 김치도 존재한다.</p> 김치만두, 김치볶음밥, 김치찌개, 김치전 등등 많은 요리에도 쓰인다."
+        output.innerHTML=str;
+      }
+      else{
+        output.innerHTML="";
+        str+="<p><h3>불고기</h3></p><h5><p>불고기는 여러 동물의 고기를 얇게 썰어 양념으로 재운 뒤 불에 구워 먹는 한국 요리의 하나이다. 구수하고 짭짤한 맛과 불맛이 무난히 어우러지기 때문에 외국인들이 가장 선호하는 한국 음식 중 하나이기도 하다.<p>조리법:<ol><li>고기(돼지,소를 주로 사용)를 얇게 썬 후 두드려 부드럽게 만든다.</li><li>간장에 파, 마늘, 후추, 사이다 등을 넣은 조미액에 30분 정도 재워놓는다.</li><li>깨, 참기름 등을 넣어 버무린다.</li><li>재운 고기를 꺼내어 중불에 굽는다.</li></ol></p>";
+        output.innerHTML=str;
+      }
+    }
+  </script>
+  <h2>대표적인 한식 3가지</h2>
   <div><p>
-  <select id="kofood" onchange="changeimage()">
-    <option id="bibimbap" value="media/bibimbap.PNG">비빔밥</option>
-    <option id="kimchi" value="media/kimchi.PNG">김치</option>
-    <option id="bulgogi" value="media/bulgogi.PNG">비빔밥</option>
+  <select id="kofood" onchange="changeimage(); print3food()">
+    <option value="media/bibimbap.PNG" selected>비빔밥</option>
+    <option value="media/kimchi.PNG" >김치</option>
+    <option value="media/bulgogi.PNG">불고기</option>
   </select>
   </p>
+  <div id="tab">
   <img id="foodimg" src="media/bibimbap.PNG">
+  
+  <div id="explain">
+    <p><h3>비빔밥</h3></p>
+    <h5>비빔밥은 밥에 각종 나물을 넣고, 장을 넣어서 비벼 먹는 전통 한국 요리로, 오늘날에는 육류를 같이 넣는 것이 선호되기도 한다
+      <p>조리법:
+      <ol>
+        <li>냉장고를 열어 나물류를 비롯한 있는 반찬을 꺼낸다.</li>
+        <li>밥을 퍼서 큰 그릇에 담는다.</li>
+        <li>꺼낸 반찬을 모두 밥 퍼놓은 그릇 위에 얹는다.</li>
+        <li>고추장(간장이나 된장이나 쌈장도 좋다)과 참기름을 한 큰술씩 넣는다.<br>
+          소고기를 볶다가 고추장을 넣은 볶은 고추장은 비빔밤의 맛을 한층 업그레이드해주니 참고.</li>
+        <li>취향에 따라 계란 프라이도 하나 넣는다.</li>
+        </ol>
+      </p>
+    </h5>
   </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <h3>
+    그밖의 것들
+  </h3>
+  
+  <div id="elsefood"></div>
 </body>
+<script>
+  let alchol=["소주","막걸리"];
+  let drink=["감주","녹차","쌍화탕","유자차","수정과"];
+  let dessert=["한과","약과","떡","강정"]
+  let str="";
+  let printelsefoodid=document.getElementById("elsefood");
+  function printelsefood(){
+    for(let i=0;i<alchol.length;i++){
+      str+=alchol[i]+", ";
+    }
+    for(let i=0;i<drink.length;i++){
+      str+=drink[i]+", ";
+    }
+    for(let i=0;i<dessert.length;i++){
+      if(i==dessert.length-1){
+        str+=dessert[i];
+      }
+      else{
+        str+=dessert[i]+", ";
+      }
+    }
+    printelsefoodid.innerHTML=str;
+  }
+  printelsefood();
+</script>
 </html>

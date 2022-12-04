@@ -70,8 +70,8 @@
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     
-    
   </style>
+ 
 </head>
 <body>
   <nav id="menubar">
@@ -112,17 +112,27 @@
         대한민국은 동아시아 한반도에 위치한 민주공화국이다.
       </h5>
       <h5>수도: 서울 Seoul</h5>
+      <p><div style="width:300px; float:left">
       <h5>
-        국가:애국가  /*버튼넣기*/
+        국가:애국가  <button id="lybutton" style="background-color:greenyellow; border:1px solid green;
+        border-radius:5px" onclick="showlyrics()">가사보기</button>
       </h5>
+      
       <h5>
         <audio src="media/aegukga.mp3" controls >
           브라우저가 audio 재생을 지원하지 않습니다.
         </audio>
       </h5>
-      <h5>국화:무궁화</h5>
-
-       
+      </div></p>
+      <h5 id="lyrics" style="width:480px; float:right; color:\rgb(238, 250, 228);">
+        <p>&nbsp;&nbsp;&nbsp;1절<br></p>
+        동해물과 백두산이 마르고 닳도록<br>
+        하느님이 보우하사 우리나라 만세<br>
+        무궁화 삼천리 화려강산<br>
+        대한사람 대한으로 길이 보전하세
+      </h5>
+      <br><br><br><br><br><br><br><h5>국화:무궁화</h5>
+ 
     </article>
     <article id="origin">
       <h3>● 한류의 어원</h3>
@@ -183,4 +193,10 @@
 
   </nav>
 </body>
+<script>
+  let l=document.getElementById("lyrics");
+  function showlyrics(){
+    l.style.color="black";
+  }
+</script>
 </html>
