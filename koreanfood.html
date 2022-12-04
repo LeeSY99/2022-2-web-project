@@ -32,12 +32,32 @@
     }
     body{
       margin: 0 auto;
-      width: 950px;
-      background-color: beige;
+      width: 960px;
+    }
+    img{
+      width: 400px;
+      height:300px;
+    }
+    div{
+      display:inline-block;
     }
   </style>
+  <script>
+    function changeimage(){
+      let sel=document.getElementById("kofood");
+      let img=document.getElementByID("foodimg");
+      img.src = sel.options[sel.selectedIndex].value();
+    }
+  </script>
 </head>
-<body>
+<body onload="changeimage()">
+  <script>
+    let current=new Date();
+    if(current.getSeconds()%2==0)
+      document.body.style.backgroundColor="rgb(230, 247, 222)";
+    else
+      document.body.style.backgroundColor="rgb(200, 200, 200)"
+  </script>
   <nav id="menubar">
     <ul>
       <li><a href="index.html"> Home</a></li>
@@ -48,5 +68,15 @@
     </ul>
   </nav>
   <br>
+  <hr>  
+  <div><p>
+  <select id="kofood" onchange="changeimage()">
+    <option id="bibimbap" value="media/bibimbap.PNG">비빔밥</option>
+    <option id="kimchi" value="media/kimchi.PNG">김치</option>
+    <option id="bulgogi" value="media/bulgogi.PNG">비빔밥</option>
+  </select>
+  </p>
+  <img id="foodimg" src="media/bibimbap.PNG">
+  </div>
 </body>
 </html>

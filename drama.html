@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>한류를 알아보자</title>
+  <title>K드라마를 알아보자</title>
   <style>
     #menubar {
       background : skyblue;/*메뉴바 배경색*/
@@ -32,10 +32,30 @@
     }
     body{
       margin: 0 auto;
-      width: 950px;
+      width: 960px;
       background-color: beige;
     }
+    #poster{
+      width: 1040px;
+    }
+    #poster th{
+      display: inline-block;
+      list-style-type:none;
+      width:240px;
+      height: 340px;
+      padding:0px;
+      background-size: cover;
+    }
+    #poster img{
+      transition: all 0.2s linear;
+    }
+    #poster th:hover img{
+      transform:scale(1.5);
+    }
+    
   </style>
+  
+  
 </head>
 <body>
   <nav id="menubar">
@@ -48,5 +68,26 @@
     </ul>
   </nav>
   <br>
+  <hr>
+  <h3>해외에서 흥행한 한국드라마</h3>
+  <nav id="poster">
+    <table>
+      <tr>
+        <th><img src="media/squidgame.PNG" width="100%" height="100%" title="오징어 게임"
+          ></th>
+        <th><img src="media/dp.PNG" width="100%" height="100%" title="D.P."></th>
+        <th><img src="media/sool.PNG" width="100%" height="100%" title="술꾼도시여자들"></th>
+        <th><img src="media/haebang.PNG" width="100%" height="100%" title="나의 해방일지"></th>
+      </tr>
+      <tr>
+        <th><img src="media/doggae.PNG" width="100%" height="100%" title="쓸쓸하고 찬란하神 - 도깨비"
+          ></th>
+        <th><img src="media/love.PNG" width="100%" height="100%" title="사랑의 불시착"></th>
+        <th><img src="media/sun's.PNG" width="100%" height="100%" title="태양의 후예"></th>
+        <th><img src="media/beauty.PNG" width="100%" height="100%" title="뷰티 인사이드"></th>
+      </tr>
+    </table>
+    <br><br><br><br><br>
+  </nav>
 </body>
 </html>
